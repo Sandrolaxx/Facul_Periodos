@@ -1,0 +1,131 @@
+Aluno: Sandro Matheus Ramos   Curso: Engenharia de Software
+
+Trabalho Formas Normais
+
+Letra A
+
+TABELA EMPREGADO
+ __________________________________________________________________________
+|ID | NOME | ID_DEPARTAMENTO | ID_GERENTE | ID_PROJETO | HORAS_TRABALHADAS |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ 
+
+ TABELA GERENTE
+ __________________________________________________________________________
+|ID | NOME | ID_DEPARTAMENTO | ID_GERENTE | ID_PROJETO | HORAS_TRABALHADAS |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ 
+
+ TABELA PROJETO
+ _______________________________________________________________
+|ID | NOME | DATA_INICIO | TOTAL_HORAS_TRABALHADAS | VALOR-HORA |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ 
+
+------------------------------------------------------------------------------------
+
+
+Letra B
+
+ TABELA ORDEM_COMPRA
+ ________________________________________________
+|ID | DATA_EMISSAO | ID_FORNECEDOR | VALOR_TOTAL |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA FORNECEDOR
+ ________________________
+|ID | NOME | ID_ENDERECO |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA ENDERECO
+ _________________________________________________________________________
+|ID | PRINCIPAL | CEP | CIDADE | UF | BAIRRO | RUA | NUMERO | COMPLEMENTO |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA MATERIAL
+ _______________________
+|ID | DESCRICAO | VALOR |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA ORDER_COMPRA_MATERIAL
+ ___________________________________
+|ID | ID_ORDEM_COMPRA | ID_MATERIAL |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Quantidade Comprada (n vezes), Valor Unitário (n vezes), Valor Total do Item (n vezes) 
+--> CAMPOS ACIMA SERIAM CAMPOS PROJETADOS VIA SELECT COM INNER EM ORDEM_COMPRA E MATERIAL
+
+
+------------------------------------------------------------------------------------
+
+
+Letra C
+
+ TABELA NOTA_FISCAL
+ __________________________________________________________________________
+|ID | NF_NUMERO | SERIE | DATA_EMISSAO | ID_CLIENTE | ID_PEDIDO | VALOR_NF |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA CLIENTE
+ ______________________________________
+|ID | NOME | ID_ENDERECO | CGC_CLIENTE |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA ENDERECO
+ _________________________________________________________________________
+|ID | PRINCIPAL | CEP | CIDADE | UF | BAIRRO | RUA | NUMERO | COMPLEMENTO |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA PEDIDO
+ _______________________________________
+|ID | ID_CLIENTE | STATUS | VALOR_TOTAL |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA MERCADORIA
+ _____________________________
+|ID | DESCRICAO | PRECO_VENDA |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA PEDIDO_MERCADORIA
+ _______________________________
+|ID | ID_PEDIDO | ID_MERCADORIA |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+Quantidade vendida --> CAMPO PROJETADO VIA SELECT COM INNER EM PEDIDO E MERCADORIA
+
+
+------------------------------------------------------------------------------------
+
+
+Letra D
+
+ TABELA DISCIPLINA
+ ________________________
+|ID | NOME | NR_CREDITOS |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA TURMA
+ __________
+|ID | NOME |
+ ¯¯¯¯¯¯¯¯¯¯
+
+ TABELA ALUNO
+ __________
+|ID | NOME |
+ ¯¯¯¯¯¯¯¯¯¯
+
+ TABELA ASSUNTO
+ ______________________
+|ID | NOME | QTD_AULAS | 
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+TABELA DISCIPLINA_ASSUNTO
+ ________________________________
+|ID | ID_DISCIPLINA | ID_ASSUNTO | 
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA TURMA_ALUNO
+ _________________________
+|ID | ID_TURMA | ID_ALUNO | 
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+  TABELA DISCIPLINA_ALUNO
+ ______________________________
+|ID | ID_DISCIPLINA | ID_ALUNO | 
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯

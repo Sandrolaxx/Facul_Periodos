@@ -1,0 +1,98 @@
+--TRABALHO CONSULTAS BANCO IBGE
+--LINGUAGEM UTILIZADA PL/pgSQL
+
+------------------------------------------------------------------
+--Mostre apenas as cidades que são capitais
+SELECT *
+	 FROM dados_ibge di
+	WHERE  is_capital = 1;
+	
+------------------------------------------------------------------
+--Mostre as 10 cidades brasileiras com maior população
+
+SELECT *
+	 FROM dados_ibge di 
+	ORDER BY populacao_2010 DESC 
+	LIMIT 10;
+
+------------------------------------------------------------------
+--Mostre as 50 cidades brasileiras com menor população
+
+SELECT *
+	 FROM dados_ibge di 
+	ORDER BY populacao_2010 ASC 
+	LIMIT 50;
+	
+------------------------------------------------------------------
+--Mostre as cidades brasileiras, ordenadas por ordem alfabética e por estado
+
+SELECT *
+	 FROM municipio m 
+	ORDER BY uf asc, nome asc;
+
+------------------------------------------------------------------
+--Mostre quantas cidades brasileiras estão localizadas por região
+
+SELECT REGIAO, count(regiao) AS QTD_CIDADES 
+	 FROM municipio m
+	GROUP BY regiao;
+
+------------------------------------------------------------------
+--Mostre quantas cidades brasileiras são metrópole
+
+SELECT count(*) AS QTD_CIDADES_METROPOLE 
+	 FROM dados_ibge di 
+	WHERE porte = 'Metrópole';
+
+------------------------------------------------------------------
+--Mostre o estado que tem menos cidades e sua quantidade
+
+SELECT descricao_uf AS ESTADO, count(*) AS QTD_CIDADES
+	 FROM municipio m
+	GROUP BY uf, descricao_uf 
+	ORDER BY count(*) ASC
+	LIMIT 1;
+
+------------------------------------------------------------------
+--Mostre o estado que tem mais cidades e sua quantidade
+
+SELECT descricao_uf AS ESTADO, count(*) AS QTD_CIDADES
+	 FROM municipio m
+	GROUP BY uf, descricao_uf 
+	ORDER BY count(*) DESC
+	LIMIT 1;
+	
+------------------------------------------------------------------
+--Mostre quais cidades brasileiras começam com "São", "Santo" e "Santa"
+
+SELECT *
+	 FROM municipio m
+	WHERE nome LIKE ANY (array['São%','Santo%','Santa%']);
+
+------------------------------------------------------------------
+--Mostre quais cidades contém as palavras "Norte", "Sul", "Leste" e "Oeste" em seus nomes
+
+SELECT *
+	 FROM municipio m
+	WHERE nome LIKE ANY (array['%Norte%','%Sul%','%Leste%','%Oeste%']);
+
+------------------------------------------------------------------
+--Mostre quais cidades tem mais de 500.000 habitantes e menos de 1.000.000
+
+SELECT m.*, di.populacao_2010  AS POPULACAO
+	 FROM dados_ibge di 
+	INNER JOIN municipio m ON m.id_municipio = di.id_municipio 
+	WHERE di.populacao_2010 > 500000
+	 AND di.populacao_2010 < 1000000;
+	
+------------------------------------------------------------------
+--Mostre a cidade com menor população de cada estado
+
+SELECT m.nome AS CIDADE, m.descricao_uf AS ESTADO, MENOR_CIDADE.min AS QTD_POPULACAO  
+	FROM municipio m 
+ INNER JOIN	(SELECT uf, min(populacao_2010), max(m.id_municipio)--MÉTODO NÃO MUITO ORTODOXO DE TRAZER O ID DO MUNICÍPIO... 
+				 FROM dados_ibge di 
+				INNER JOIN municipio m ON m.id_municipio = di.id_municipio 
+				GROUP BY uf
+			) MENOR_CIDADE ON MENOR_CIDADE.MAX = m.id_municipio
+		ORDER BY MENOR_CIDADE.min DESC;	

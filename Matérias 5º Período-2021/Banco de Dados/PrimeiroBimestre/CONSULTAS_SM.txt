@@ -1,0 +1,101 @@
+
+--==================================================================CONSULTAS=================================================================--
+
+/* LISTA DE REQUISITOS E CONSULTAS */
+
+--Permitir que a secretaria cadastre os alunos novos; -- Já realizado no arquivo de inserções
+
+--==================================================================
+
+--Permitir que a secretaria realize a matrícula dos alunos novos(considerar matricular em todas as 
+--disciplinas do primeiro período de ingresso do aluno)) -- Já realizado no arquivo de inserções, a parte 
+--de considerar todas as disciplinas, não consigo visualizar essa regra de negocio no banco, quem sabe com valor default no campo...não sei.
+
+--==================================================================
+
+--Permitir que os alunos veteranos possam realizar a sua própria matrícula 
+--(considerar matricular em todas as disciplinas do período selecionado)  -- Outra regra de negocio que não consigo implementar no banco,
+--como vou saber que ele é veterano? Bom o banco estária preparado para isso se a aplicação tratasse essa regra.
+
+--==================================================================
+
+--Permitir que o coordenador altere a matrícula do aluno, tirando o vínculo de disciplinas que serão dispensadas e vinculando disciplinas 
+--que o aluno irá fazer de maneira adicional no período matriculado.
+
+UPDATE SM_MATRICULA_DISCIPLINA SET ID_DISCIPLINA = 4 WHERE ID_MATRICULA = 5 AND ID_DISCIPLINA = 3;
+
+--==================================================================
+
+-- Permitir que o coordenador altere o status da disciplina, considerando que o aluno poderá vir transferido de outra 
+-- instituição e eliminar disciplinas;
+
+UPDATE SM_MATRICULA_DISCIPLINA SET STATUS = 'DISPENSADO' WHERE ID_MATRICULA = 5 AND ID_DISCIPLINA = 8;
+
+--==================================================================
+
+-- Permitir que o professor realize o controle de frequência dos alunos, registrando as faltas por data de aula dada; -- Já realizado no arquivo de inserções
+
+--==================================================================
+
+-- Permitir que o professor realize o controle de frequência dos alunos, registrando as faltas por data de aula dada; -- Já realizado no arquivo de inserções
+
+--==================================================================
+
+-- Permitir ao professor o lançamento das notas bimestrais, bem como, o lançamento das notas de exame, quando o aluno 
+-- não atingir a média estipulada pela instituição;  -- Já realizado no arquivo de inserções
+
+--==================================================================
+
+-- Permitir que o aluno visualize as notas, as faltas e a situação acadêmica de cada disciplina;
+
+--VISUALIZAR NOTAS
+SELECT AL.NOME AS NOME_ALUNO, AL.RA, D.NOME AS DISCIPLINA, NT.VALOR, NT.PERIODO, NT.BIMESTRE
+        FROM SM_ALUNO AL
+    INNER JOIN SM_NOTA NT ON NT.ID_ALUNO = AL.ID_ALUNO
+    INNER JOIN SM_DISCIPLINA D ON D.ID_DISCIPLINA = NT.ID_DISCIPLINA
+        WHERE AL.ID_ALUNO = 5;
+
+--VISUALIZAR FALTAS
+SELECT AL.NOME AS NOME_ALUNO, AL.RA, D.NOME AS DISCIPLINA, FT.DATA_AULA AS DATA_FALTA
+        FROM SM_ALUNO AL
+    INNER JOIN SM_FALTA FT ON FT.ID_ALUNO = AL.ID_ALUNO
+    INNER JOIN SM_DISCIPLINA D ON D.ID_DISCIPLINA = FT.ID_DISCIPLINA
+        WHERE AL.ID_ALUNO = 5;        
+
+--VISUALIZAR SITUAÇÃO ACADÊMICA
+SELECT AL.NOME AS NOME_ALUNO, AL.RA, D.id_disciplina AS DISCIPLINA, MTD.STATUS AS SITUACAO_DISCIPLINA
+        FROM SM_ALUNO AL
+    INNER JOIN SM_MATRICULA MT ON MT.ID_ALUNO = AL.ID_ALUNO
+    INNER JOIN SM_MATRICULA_DISCIPLINA MTD ON MTD.ID_MATRICULA = MT.ID_MATRICULA
+    INNER JOIN SM_DISCIPLINA D ON D.ID_DISCIPLINA = MTD.ID_DISCIPLINA
+        WHERE AL.ID_ALUNO = 5;
+
+--==================================================================
+
+-- Permitir que o professor crie fórum de discussão para que os alunos possam interagir sobre um determinado assunto. 
+-- O fórum só poderá ser criado pelo professor e vinculado às disciplinas que ele desejar, permitindo interação no  
+-- fórum apenas dos alunos que estão matriculados na disciplina;  -- Já realizado no arquivo de inserções
+
+--==================================================================
+
+-- Permitir que seja exibido ao aluno a sua nota bimestral e um comparativo com a média da turma, ou seja, realizar a média de todas
+-- as notas válidas do bimestre em uma determinada disciplina e comparar com a nota do aluno que está consultando, 
+-- mostrando a diferença entre as duas
+
+
+SELECT AL.NOME, D.NOME, MEDIA_AL.MEDIA_ALUNO, MEDIA_DISC.MEDIA_DISCIPLINA, 
+       (MEDIA_DISC.MEDIA_DISCIPLINA - MEDIA_AL.MEDIA_ALUNO) AS DIFERENCA_NOTA
+        FROM SM_ALUNO AL       
+    INNER JOIN (
+        SELECT ID_ALUNO, ID_DISCIPLINA, ROUND((SUM(VALOR)/2),2) AS MEDIA_ALUNO
+            FROM SM_NOTA
+            GROUP BY ID_ALUNO, ID_DISCIPLINA
+    ) MEDIA_AL ON MEDIA_AL.ID_ALUNO = AL.ID_ALUNO 
+    INNER JOIN (
+        SELECT ID_DISCIPLINA, ROUND(AVG(VALOR),2) AS MEDIA_DISCIPLINA 
+            FROM SM_NOTA
+        WHERE VALOR >= 0    
+        GROUP BY ID_DISCIPLINA
+    ) MEDIA_DISC ON MEDIA_DISC.ID_DISCIPLINA = MEDIA_AL.ID_DISCIPLINA
+    INNER JOIN SM_DISCIPLINA D ON D.ID_DISCIPLINA = MEDIA_AL.ID_DISCIPLINA
+WHERE AL.ID_ALUNO = 5;

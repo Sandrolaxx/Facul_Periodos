@@ -1,0 +1,22 @@
+Daily dia 19/08
+
+Disculção sobre aquição de raspberry PI e outras dicas:
+
+-Pedro: 
+-Pesquisa sobre os valores de hardware similares ao raspberry PI:
+ PI3 114 Importado(Aliexpress) + 111 aparelho GPS importado(Amazon)
+
+-Sandro:
+-Organização das tarefas 'pegas no trello' que terão data para entrega e 
+sistema de check-list das tarefas para acompanhamento dos outros integrantes
+do grupo, para assim trazer mais visibilidade do trabalho realizado.
+
+-Alinhamento de opniões quanto ao design do projeto e sujestão de 
+desenvolvimento de design UX de outras ideis na matéria de 'interface 
+homem computador' onde foi proposto pelo professor a criação de uma interface
+mobile.
+
+-Geral
+
+-Consenso quando a aquisição de um raspberry PI3 e sobre o desenvolvimento da
+aplicação tanto em celular em um primeiro momento quanto no raspberry posteriormente 

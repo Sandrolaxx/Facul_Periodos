@@ -1,0 +1,16 @@
+Descrição das Tabelas após Normalização;
+
+DADOS_IBGE(ID_DADOS_IBGE, COD_IBGE, COD_IBGE7, ID_MUNICIPIO, POPULACAO_2010, PORTE, IS_CAPITAL);
+
+MUNICIPIO(ID_MUNICIPIO, NOME, REGIAO, UF, DESCRICAO_UF);
+
+
+ TABELA DADOS_IBGE
+ __________________________________________________________________________________________
+|ID_DADOS_IBGE | COD_IBGE | COD_IBGE7 | ID_MUNICIPIO | POPULACAO_2010 | PORTE | IS_CAPITAL |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+ TABELA MUNICIPIO 
+ _________________________________________________
+|ID_MUNICIPIO | NOME | REGIAO | UF | DESCRICAO_UF |
+ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯

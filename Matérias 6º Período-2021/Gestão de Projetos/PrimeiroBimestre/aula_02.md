@@ -81,3 +81,10 @@ Gestão de recursos: Aquisição de Máteriais e Recursos Humanos.
 * * Interna e externa ao projeto.
 * Integração: 
 * * Integração de todas as disciplinas.
+
+
+Não realizamos o levantamento de riscos.
+Não demos a devida atenção e tempo ao planejamento.
+Não fizemos o devido gerenciamento dos recursos humanos, não realizamos a devida divisão de acordo com a especialidade de cada integrante.
+Não tivemos uma boa comunicação no time, o que levou a uma certa desorganização.
+

@@ -1,0 +1,13 @@
+A qualidade da imagem não estava muito boa, optei por fazer assim.
+
+Projeto: DonaFrost
+Grupo: Sandro Matheus Ramos
+       João Pedralli
+       Mathias Meyer
+
+
+1 - Persona: Clebér - Jovem moreno de 23 anos, possui um estilo de vida saudável, cursando veterinária, mora em um apartamento alugado próximo à faculdade particular aonde estuda e é bolsista, trabalha em uma clínica veterinária em tempo integral, valoriza muito seu salário que em grande parte é direcionado a sua formação, moradia e contas recorrentes. É bem extrovertido e todos de sua turma gostam dele, porém raramente frequenta as baladas que é convidado. A rotina de Cléber consiste em trabalhar de manhã, uma hora e meia de almoço, trabalho a tarde, e sua graduação a noite. As prioridades dele são de terminar sua graduação e abrir seu próprio negócio, pois identificou que o antigo bairro onde morava carece de serviços de veterinária em geral. Seus problemas são de querer manter uma alimentação saudável porem, por conta da rotina apertada não pode dar tanta atenção a sua alimentação.
+
+2 - Problema Selecionado: Querer manter uma alimentação saudável.
+
+3 - Causas do Problema: Não ter tempo ou muito dinheiro para poder ter uma refeição elaborada, por conta de ter uma rotina muito corrida e seus gastos muito regrados.

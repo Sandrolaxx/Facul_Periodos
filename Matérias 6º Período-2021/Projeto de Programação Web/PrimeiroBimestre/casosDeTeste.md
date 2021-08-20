@@ -9,8 +9,11 @@
 <br>**Pré-Condição:** Possuir credenciais do sistema para gerar o token de autenticação.
 <br>**Passo-a-Passo:** Realizar um método POST na rota http://localhost:9091/auth/realms/dfmicroservices/protocol/openid-connect/token, informando no um Form-URL encoded com os campos "grant_type":password, "username":front-end-web, "password":1329 e no header da request o campo "Authorization":Basic ZnJvbnQtZW5kLXByb2R1Y3Q6.
 <br>**Resultado Esperado:** Gerar o Token de Autenticação para poder realizar chamadas nas outras rotas.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nennhum
+
+Print do Teste #0
+![Print do Teste #0](PrintsCasosDeTeste/CasoTeste00.png)
 
 <br>
 
@@ -39,8 +42,11 @@ Ex de body:
 }
 ```
 >**Resultado Esperado:** Cadastrar produto na base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nenhum
+
+Print do Teste #1
+![Print do Teste #1](PrintsCasosDeTeste/CasoTeste01.png)
 
 ---
 
@@ -62,8 +68,11 @@ Ex de body:
 }
 ```
 >**Resultado Esperado:** Atualização dos campos de um produto existente na base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nennhum
+
+Print do Teste #2
+![Print do Teste #2](PrintsCasosDeTeste/CasoTeste02.png)
 
 ---
 
@@ -76,8 +85,11 @@ Ex de body:
 <br>**Pré-Condição:** Estar autenticado no sistema, existir um produto na base de dados.
 <br>**Passo-a-Passo:** Realizar um método DELETE na rota https://localhost:8080/dona-frost/v1/product, informar no header o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01, também no header o campo "id" com o número do id do produto a ser deletado.
 <br>**Resultado Esperado:** Remover o produto informado.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nennhum
+
+Print do Teste #3
+![Print do Teste #3](PrintsCasosDeTeste/CasoTeste03.png)
 
 ---
 
@@ -90,8 +102,11 @@ Ex de body:
 <br>**Pré-Condição:** Estar autenticado no sistema, existir mais de um produto na base de dados.
 <br>**Passo-a-Passo:** Realizar um método GET na rota https://localhost:8080/dona-frost/v1/product, informar no header o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01.
 <br>**Resultado Esperado:** Listar todos os produtos da base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nennhum
+
+Print do Teste #4
+![Print do Teste #4](PrintsCasosDeTeste/CasoTeste04.png)
 
 ---
 
@@ -131,8 +146,11 @@ Ex de body:
 }
 ```
 >**Resultado Esperado:** Cadastrar usuário na base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nenhum
+
+Print do Teste #5
+![Print do Teste #5](PrintsCasosDeTeste/CasoTeste05.png)
 
 ---
 
@@ -156,8 +174,11 @@ Ex de body:
 }
 ```
 >**Resultado Esperado:** Atualização dos campos de um usuário existente na base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nennhum
+
+Print do Teste #6
+![Print do Teste #6](PrintsCasosDeTeste/CasoTeste06.png)
 
 ---
 
@@ -170,8 +191,14 @@ Ex de body:
 <br>**Pré-Condição:** Estar autenticado no sistema, existir um usuário na base de dados.
 <br>**Passo-a-Passo:** Realizar um método DELETE na rota https://localhost:8081/dona-frost/v1/user, informar no header o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01, também no header o campo "idUser" número do id do usuário a ser deletado.
 <br>**Resultado Esperado:** Remover o usuário informado.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nennhum
+
+Print do Teste #7 Parte 1
+![Print do Teste #7_01](PrintsCasosDeTeste/CasoTeste07_01.png)
+
+Print do Teste #7 Parte 2
+![Print do Teste #7_02](PrintsCasosDeTeste/CasoTeste07_02.png)
 
 ---
 
@@ -184,8 +211,11 @@ Ex de body:
 <br>**Pré-Condição:** Estar autenticado no sistema, existir mais de um usuário na base de dados.
 <br>**Passo-a-Passo:** Realizar um método GET na rota https://localhost:8081/dona-frost/v1/user, informar no header o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01.
 <br>**Resultado Esperado:** Listar todos os usuários da base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nennhum
+
+Print do Teste #8
+![Print do Teste #6](PrintsCasosDeTeste/CasoTeste07_02.png)
 
 ---
 
@@ -213,8 +243,11 @@ Ex de body:
 }
 ```
 >**Resultado Esperado:** Cadastrar o novo endereço a um usuário existente na base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nenhum
+
+Print do Teste #9
+![Print do Teste #9](PrintsCasosDeTeste/CasoTeste09.png)
 
 ---
 
@@ -241,8 +274,11 @@ Ex de body:
 }
 ```
 >**Resultado Esperado:** Atualizar os campos do endereço informado na base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nenhum
+
+Print do Teste #10
+![Print do Teste #10](PrintsCasosDeTeste/CasoTeste10.png)
 
 ---
 
@@ -255,8 +291,11 @@ Ex de body:
 <br>**Pré-Condição:** Estar autenticado no sistema, existir um endereço na base de dados.
 <br>**Passo-a-Passo:** Realizar um método DELETE na rota https://localhost:8081/dona-frost/v1/address, informar no header o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01, também no header o campo "idUser" número do id do usuário e "idAddress" número do id do endereço a ser deletado.
 <br>**Resultado Esperado:** Deletar/Remover endereço informado da base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nenhum
+
+Print do Teste #11
+![Print do Teste #11](PrintsCasosDeTeste/CasoTeste11.png)
 
 ---
 
@@ -272,8 +311,11 @@ Testes - MicroServiço Marketplace
 <br>**Descrição:** Realizar teste na rota adição de produto no carrinho.
 <br>**Passo-a-Passo:** Realizar um método POST na rota https://localhost:8082/dona-frost/v1/cart, informando no header da requisição o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01, também o campo "idCart" com o número do id do carrinho que será adicionado o produto, "idProduct" com o número do id do produto a ser adicionado no carrinho e também o campo "quantity" com a quantidade a ser adicionada do produto escolhido.
 <br>**Resultado Esperado:** Persistir um produto em um carrinho existente na base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nenhum
+
+Print do Teste #12
+![Print do Teste #12](PrintsCasosDeTeste/CasoTeste12.png)
 
 ---
 
@@ -286,8 +328,11 @@ Testes - MicroServiço Marketplace
 <br>**Pré-Condição:** Estar autenticado no sistema e existir um carrinho com produto na base de dados.
 <br>**Passo-a-Passo:** Realizar um método PUT na rota https://localhost:8082/dona-frost/v1/cart, informando no header da requisição o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01, também o campo "idProductCart" com o número do id do Produto Carrinho que será adicionado quantidade do produto, o campo "quantity" com a quantidade a ser adicionada do Produto Carrinho escolhido.
 <br>**Resultado Esperado:** Adicionar a quantidade informada a um produto em um carrinho existente na base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nenhum
+
+Print do Teste #13
+![Print do Teste #13](PrintsCasosDeTeste/CasoTeste13.png)
 
 ---
 
@@ -300,8 +345,11 @@ Testes - MicroServiço Marketplace
 <br>**Pré-Condição:** Estar autenticado no sistema e existir um carrinho com produto na base de dados.
 <br>**Passo-a-Passo:** Realizar um método DELETE na rota https://localhost:8082/dona-frost/v1/cart, informando no header da requisição o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01, também o campo "idProductCart" com o número do id do Produto Carrinho que será removida a quantidade do produto, o campo "quantity" com a quantidade a ser removida do Produto Carrinho escolhido.
 <br>**Resultado Esperado:** Remover a quantidade informada de um produto em um carrinho existente na base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nenhum
+
+Print do Teste #14
+![Print do Teste #14](PrintsCasosDeTeste/CasoTeste14.png)
 
 ---
 
@@ -314,8 +362,14 @@ Testes - MicroServiço Marketplace
 <br>**Pré-Condição:** Estar autenticado no sistema e existir um carrinho com produto na base de dados.
 <br>**Passo-a-Passo:** Realizar um método DELETE na rota https://localhost:8082/dona-frost/v1/cart, informando no header da requisição o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01, também o campo "idProductCart" com o número do id do Produto Carrinho que será deletado do carrinho.
 <br>**Resultado Esperado:** Remover o produto do carrinho caso sejam atendidas as condições presentes na descrição do teste.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nenhum
+
+Print do Teste #15 Parte 1
+![Print do Teste #15_01](PrintsCasosDeTeste/CasoTeste15_01.png)
+
+Print do Teste #15 Parte 2
+![Print do Teste #15_02](PrintsCasosDeTeste/CasoTeste15_02.png)
 
 ---
 
@@ -328,8 +382,12 @@ Testes - MicroServiço Marketplace
 <br>**Pré-Condição:** Estar autenticado no sistema, existir um carrinho na base de dados.
 <br>**Passo-a-Passo:** Realizar um método GET na rota https://localhost:8082/dona-frost/v1/cart, informando no header da requisição o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01, também o campo "idCart" com o número do id do carrinho que será listado.
 <br>**Resultado Esperado:** Listar todos as entidades ProdutosCarrinho de um determinado carrinho da base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nennhum
+
+Print do Teste #16
+![Print do Teste #16](PrintsCasosDeTeste/CasoTeste16.png)
+
 
 ---
 
@@ -342,8 +400,11 @@ Testes - MicroServiço Marketplace
 <br>**Pré-Condição:** Estar autenticado no sistema e existir um carrinho na base de dados.
 <br>**Passo-a-Passo:** Realizar um método POST na rota https://localhost:8082/dona-frost/v1/order.
 <br>**Resultado Esperado:** Transformar um carrinho em pedido e persistir este na base de dados.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nenhum
+
+Print do Teste #17
+![Print do Teste #17](PrintsCasosDeTeste/CasoTeste17.png)
 
 ---
 
@@ -356,8 +417,11 @@ Testes - MicroServiço Marketplace
 <br>**Pré-Condição:** Estar autenticado no sistema, existir pedidos na base de dados.
 <br>**Passo-a-Passo:** Realizar um método GET na rota https://localhost:8082/dona-frost/v1/order, informando no header da requisição o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01, também o campo "idUser" com o número do id do usuário que será listado os pedidos.
 <br>**Resultado Esperado:** Listar todos os pedidos de um determinado usuário da base de dados, trazendo tal informação descriptografada.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nennhum
+
+Print do Teste #18
+![Print do Teste #18](PrintsCasosDeTeste/CasoTeste18.png)
 
 ---
 
@@ -370,5 +434,9 @@ Testes - MicroServiço Marketplace
 <br>**Pré-Condição:** Estar autenticado no sistema, existir pedidos no status escolhido na base de dados.
 <br>**Passo-a-Passo:** Realizar um método GET na rota https://localhost:8082/dona-frost/v1/order, informando no header da requisição o campo "Authorization" com o Token de autenticação do tipo Bearer, este que foi gerado no Teste#01, também o campo "idUser" com o número do id do usuário que será listado os pedidos, e o campo "orderStatus" com uma das EnumPaymentType, que é o tipo de pagamento que será utilizado para filtrar a listagem do pedido.
 <br>**Resultado Esperado:** Listar todos os pedidos do usuário no status escolhido, trazendo tal informação descriptografada.
-<br>**Status:** APROVADO/BUG
+<br>**Status:** APROVADO
 <br>**Report Do Bug:** Nennhum
+
+Print do Teste #19
+![Print do Teste #19](PrintsCasosDeTeste/CasoTeste19.png)
+

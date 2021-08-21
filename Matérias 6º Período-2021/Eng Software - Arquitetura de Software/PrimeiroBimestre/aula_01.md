@@ -37,4 +37,26 @@ Aula - Planejamento de Projetos: sucesso ou fracasso
 5. Não gerenciar os riscos:
     * Gestor deve estar pronto para possíveis falhas como:
     * Falta de colaborador
-    * Recursos e etc.        
+    * Recursos e etc. 
+
+
+---
+
+Normas dos trabalhos da elaine:
+
+Normas a serem seguidas:
+
+Tipo de letra: Times New Roman ou Arial
+Tamanho de letra: 12
+Espaçamento entre linhas: 1,5 cm
+Parágrafo: 1,25 cm
+Alinhamento do texto: Justificado
+Alinhamento dos títulos: Alinhado à esquerda
+	Nível 1: maiúsculo e negrito
+	Nível 2: maiúsculo sem negrito
+	Nível 3: minúsculo sem negrito
+Margem superior e esquerda: 3 cm
+Margem inferior e direita: 2 cm
+Referências bibliográficas: Informar os links pesquisados na página final
+Quantidade de páginas: Mínimo 8 páginas
+Grupo ou individual: Atividade em duplas

@@ -117,7 +117,7 @@ for i in [0, 'a', 2, 4, 1]:
 
 for
 ```python
-for i in renge(10):
+for i in range(10):
     print(i)    
 ```
 

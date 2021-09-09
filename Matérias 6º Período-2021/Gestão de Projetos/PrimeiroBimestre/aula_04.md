@@ -34,7 +34,7 @@ Processos de Gestão de Escopo:
 
 **Planjamento de escopo**: Definir as regras para definir o escopo, por exemplo: todas as tarefas estão separadas em etapas. Como eu devo montar esse escopo e como gerencialo.
 <br>**Definição do escopo**: entender como esse escopo será construido. Análise de produtos, técnicas de transformação de objetivos em tarefas.
-<br>**Criação do EAP**: Estrutura analítica do Projeto, subdivisão das principais entretgas do projeto e do trabalho em componentes menores e gerenciáveis, servem dia guia para iniciar a construção do projeto.
+<br>**Criação do EAP**: Estrutura analítica do Projeto, subdivisão das principais entregas do projeto e do trabalho em componentes menores e gerenciáveis, servem dia guia para iniciar a construção do projeto.
 <br>**Verificação do escopo**: Se ele está sendo executado, exame e mediçoes para determinar se as entregas atendem aos requisitos e critérios de aceitação do produto.
 <br>**Controle do Escopo**: Controle das mudanças de escopo do projeto, procedimentos de apresentação, aprovação e execução de mudanças, quando realizado está diferente do previsto, realizar replanejamento.
 

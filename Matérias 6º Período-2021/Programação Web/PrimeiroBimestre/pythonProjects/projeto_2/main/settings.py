@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home.apps.HomeConfig',
     'algoritimos_e_logica_de_programacao.apps.AlgoritimosELogicaDeProgramacaoConfig',
     'banco_de_dados.apps.BancoDeDadosConfig',
     'big_data.apps.BigDataConfig',
@@ -49,6 +51,9 @@ INSTALLED_APPS = [
     'engenharia_de_software_analise_e_projeto_de_software.apps.EngenhariaDeSoftwareAnaliseEProjetoDeSoftwareConfig',
     'engenharia_de_software_arquitetura_de_software.apps.EngenhariaDeSoftwareArquiteturaDeSoftwareConfig',
     'engenharia_de_software_modelagem_de_software.apps.EngenhariaDeSoftwareModelagemDeSoftwareConfig',
+    'engenharia_de_software_qualidade_de_software.apps.EngenhariaDeSoftwareQualidadeDeSoftwareConfig',
+    'engenharia_de_software_processos_e_requisitos.apps.EngenhariaDeSoftwareProcessosERequisitosConfig',
+    'engenharia_de_software_metodos_de_desenvolvimento.apps.EngenhariaDeSoftwareMetodosDeDesenvolvimentoConfig',
     'estagio_supervisionado_I.apps.EstagioSupervisionadoIConfig',
     'estagio_supervisionado_II.apps.EstagioSupervisionadoIiConfig',
     'estrutura_de_dados.apps.EstruturaDeDadosConfig',
@@ -95,7 +100,7 @@ ROOT_URLCONF = 'main.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'pages')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

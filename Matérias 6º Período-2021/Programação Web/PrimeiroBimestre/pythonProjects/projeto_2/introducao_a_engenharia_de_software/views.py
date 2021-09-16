@@ -1,4 +1,5 @@
 from django.http.response import HttpResponse
+from django.shortcuts import render
 
-def index(request):
-    return HttpResponse("Matéria: EGS19102 - Introdução a Engenharia de Software | Carga Horária:80h")
+def method(request):
+    return render(request, 'introducao_a_engenharia_de_software/index.html')

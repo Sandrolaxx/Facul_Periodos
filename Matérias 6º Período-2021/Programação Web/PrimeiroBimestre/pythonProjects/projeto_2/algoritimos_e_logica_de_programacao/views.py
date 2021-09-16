@@ -1,4 +1,5 @@
-from django.http.response import HttpResponse
+from django.shortcuts import render
 
-def index(request):
-    return HttpResponse("Matéria: Algoritmos e Lógica de Programação | Carga Horária:80h")
+# Create your views here.
+def method(request):
+    return render(request, 'algoritimos_e_logica_de_programacao/index.html')

@@ -1,4 +1,5 @@
 from django.http.response import HttpResponse
+from django.shortcuts import render
 
-def index(request):
-    return HttpResponse("Matéria: EGS19104 - Lógica Matemática | Carga Horária:80h")
+def method(request):
+    return render(request, 'logica_matematica/index.html')

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 1%, rgba(120, 9, 121, 1) 49%, rgba(0, 212, 255, 1) 100%);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    h1 {
+        color: antiquewhite;
+    }
+
+    .onfire {
+        font-size: 8em;
+    }
+
+    .apps {
+        display: flex;
+        flex-flow: row wrap;
+        list-style-type: none;
+        margin: 80px 100px;
+    }
+
+    .apps li {
+        margin: 5px;
+    }
+
+    .apps-btn a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    .apps-btn {
+        align-items: center;
+        background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+        border: 0;
+        border-radius: 8px;
+        box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+        box-sizing: border-box;
+        display: flex;
+        font-family: Phantomsans, sans-serif;
+        font-size: 16px;
+        justify-content: center;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 120px;
+        padding: 3px;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    .apps-btn:active,
+    .apps-btn:hover {
+        outline: 0;
+    }
+
+    .apps-btn a {
+        background-color: rgb(5, 6, 45);
+        padding: 8px 8px;
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
+        transition: 300ms;
+    }
+
+    .apps-btn:hover a {
+        background: none;
+    }
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀Grade🛸</title>
+</head>
+
+<body>
+    {%block 'conteudo'%}{%endblock%}
+    {% block nav %}
+    <ul class="apps">
+        <li>
+            <button class="apps-btn">
+                <a  href="http://localhost:8000/">Home</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/algoritimos_e_logica_de_programacao">algoritimos_e_logica_de_programacao</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/banco_de_dados">banco_de_dados</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/big_data">big_data</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/calculo_diferencial_e_integral">calculo_diferencial_e_integral</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/comunicacao_ead">comunicacao_ead</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/desenvolvimento_para_dispositivos_moveis">desenvolvimento_para_dispositivos_moveis</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/desenvolvimento_para_jogos_digitais">desenvolvimento_para_jogos_digitais</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/empreendedorismo_ead">empreendedorismo_ead</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/engenharia_de_economica">engenharia_de_economica</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/engenharia_de_software_analise_e_projeto_de_software">eng_de_software_analise_e_projeto_de_software</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/engenharia_de_software_arquitetura_de_software">eng_de_software_arquitetura_de_software</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/engenharia_de_software_metodos_de_desenvolvimento">eng_de_software_metodos_de_desenvolvimento</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/engenharia_de_software_modelagem_de_software">eng_de_software_modelagem_de_software</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/engenharia_de_software_processos_e_requisitos">eng_de_software_processos_e_requisitos</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/engenharia_de_software_qualidade_de_software">eng_de_software_qualidade_de_software</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/estagio_supervisionado_I">estagio_supervisionado_I</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/estagio_supervisionado_II">estagio_supervisionado_II</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/estrutura_de_dados">estrutura_de_dados</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/filosofia_ead">filosofia_ead</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/gestao_de_projetos">gestao_de_projetos</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/inovacoes_tecnologicas">inovacoes_tecnologicas</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/inteligencia_artificial">inteligencia_artificial</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/interface_homem_computador">interface_homem_computador</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/internet_das_coisas_iot">internet_das_coisas_iot</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/introducao_a_engenharia_de_software">introducao_a_engenharia_de_software</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/linguagem_de_programacao">linguagem_de_programacao</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/logica_matematica">logica_matematica</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/matematica_discreta">matematica_discreta</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/metodologia_ead">metodologia_ead</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/metodologias_ageis">metodologias_ageis</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/organizacao_e_redes_de_computadores">organizacao_e_redes_de_computadores</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/pesquisa_operacional">pesquisa_operacional</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/probabilidade_estatistica">probabilidade_estatistica</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/programaca_web">programaca_web</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/projeto_de_designe_de_software">projeto_de_designe_de_software</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/projeto_de_programacao_banco_de_dados">projeto_de_programacao_banco_de_dados</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/projeto_desenvolvimento_professional_I">projeto_desenvolvimento_professional_I</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/projeto_desenvolvimento_professional_II">projeto_desenvolvimento_professional_II</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/projeto_integracao_software">projeto_integracao_software</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/projeto_mineracao_dados">projeto_mineracao_dados</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/projeto_orientado_a_objetos">projeto_orientado_a_objetos</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/projeto_programacao_web">projeto_programacao_web</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/sociologia_ead">sociologia_ead</a>
+            </button>
+        </li>
+        <li>
+            <button class="apps-btn">
+                <a href="http://localhost:8000/sustentabilidade_ead">sustentabilidade_ead</a>
+            </button>
+        </li>
+    </ul>
+    {% endblock %}
+    <div class="onfire">🔥👨🏻‍💻⚡</div>
+</body>
+
+</html>

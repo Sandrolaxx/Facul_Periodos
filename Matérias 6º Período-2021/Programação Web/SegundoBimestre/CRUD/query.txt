@@ -1,0 +1,13 @@
+CREATE TABLE agenda (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255) NULL,
+    telefone VARCHAR(18) NULL,
+    email VARCHAR(255) NULL,
+    idade INT(11) NULL,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO agenda (nome, telefone, email, idade) VALUES 
+('Sandrolax', '45-99103-9812', 'sandro--ramos@hotmail.com', 23);
+
+SELECT * FROM AGENDA;

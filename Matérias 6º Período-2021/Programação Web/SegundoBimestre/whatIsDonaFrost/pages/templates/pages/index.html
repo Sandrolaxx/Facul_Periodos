@@ -1,0 +1,147 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Sobre a DonaFrost</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico'%}" />
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/styles.css'%}" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <img>
+            <img alt="DonaFrost logo" width="72" height="72" src="{% static 'assets/img/favicon.ico'%}" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#theProblem">O problema</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#solution">A solução</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#system">O Sistema</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid p-0">
+        <section class="resume-section" id="home">
+            <div class="resume-section-content">
+                <h1 class="mb-3">
+                    Projeto Dona<span class="text-primary">Frost</span>
+                </h1>
+                <p class="lead mb-5">Nos próximos tópicos explanaremos um pouco sobre a dor que identificamos
+                    no nosso público alvo, veremos nossa proposta de valor e também um pouco da parte técnica
+                    por trás do projeto.
+                </p>
+                <div class="subheading mb-3">Tecnologias Utilizadas no Projeto</div>
+                <ul class="list-inline dev-icons mb-5">
+                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-js"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-java"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-font-awesome"></i></li>
+                </ul>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <section class="resume-section" id="theProblem">
+            <div class="resume-section-content">
+                <h2 class="mb-5"><i class="fa fa-exclamation-triangle fa-fw"></i> O Problema</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-start mb-5 w-75">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-2">Dores</h3>
+                        <div class="subheading mb-3">O problema que identificamos foi o que pessoas que
+                            não gostam ou não sabem cozinhar, e quando sabem, não tem tempo de preparar
+                            refeições elaboradas e mesmo com esses fatores não abrem mão de terem uma
+                            alimentação saudável, estes indíviduos tembém levam em conta o valor da refeição,
+                            que preferencialmente seja o mais baixo.
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-start mb-5 w-75">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-2">Público-alvo</h3>
+                        <div class="subheading mb-3">Em um nível micro, são estudantes do ensino superior
+                            na faixa dos 18 aos 26 anos e em um nível macro, pessoas que moram sozinhas e se
+                            encaixem nas dores apontadas anteriormente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <section class="resume-section" id="solution">
+            <div class="resume-section-content">
+                <h2 class="mb-5"><i class="fa fa-thumbs-up"></i> Proposta de Valor</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-start mb-5 w-75">
+                    <div class="flex-grow-1">
+                        <div class="subheading mb-3">Consiste na venda de pratos prontos congelados,
+                            onde por conta de termos o produto previamente preparado e armazenado,
+                            nossa entrega será muito rápida, entre 10 há 15 minutos, também terá um
+                            rápido preparo, entre 10 há 15 minutos, buscamos ter uma forte presença
+                            digital para atingirmos nosso público e para trazer comodidade e praticidade
+                            aos nossos clientes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <section class="resume-section" id="system">
+            <div class="resume-section-content">
+                <h2 class="mb-5"><i class="fa fa-desktop"></i> Aplicações</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-start mb-4 w-75">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-2">Back-end</h3>
+                        <div class="subheading mb-3">Escrito na linguagem Java utilizando o framework
+                            Quarkus, e composto por três micro-serviços, o primeiro
+                            responsável por gerenciar os produtos, realizando seu respectivo CRUD, 
+                            o segundo utilizado no gerenciamento dos usuários da aplicação, também 
+                            realizando seu CRUD, já o terceiro micro-serviço fica responsável pelo e-commerce
+                            em sí, ou seja, realizar as compras, criar carrinho e etc. 
+                            <br/>Cada micro-serviço possui seu banco de dados independente, a escolha 
+                            foi o PostgreSQL, a melhor solução gratuita do momento.
+                            <br/>A comunicação e propagação dos dados entre eles é realizada 
+                            utilizando mensageria com o broker ActiveMQ.
+                            <br/>As autenticações para realizar chamadas em seus respectivos end point's
+                            fica responsável pelo Keycloack, um software feito para trabalhar em conjunto
+                            com a aplicação em implementações mais comuns de autenticação e autorização  
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-start mb-5 w-75">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-2">Front-end</h3>
+                        <div class="subheading mb-3">Criado utilizando TSX, que é o JSX(uma forma de 
+                            criar elementos para serem utilizadas como templates de aplicações React) 
+                            com o Typescript e o framework para React JS, Next.js, que nos
+                            possibilita ter uma  renderização estática e pelo lado do servidor(SSR), 
+                            também possui suporte ao Typescript e um serviço de tratamento de rotas 
+                            muito interessante.
+                            <br/>
+                            Também foi utilizado Tailwind CSS que é um framework para CSS3, que assim 
+                            como o bootstrap, nos dá o bônus de produtividade que uma biblioteca de 
+                            classes CSS trás.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/scripts.js'%}"></script>
+</body>
+
+</html>

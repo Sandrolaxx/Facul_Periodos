@@ -1,4 +1,4 @@
-# Casos de Teste - Back-End Aplicativo Actie ✨
+# Casos de Teste - Back-End Aplicativo Aktie ✨
 
 ### **ID Caso de Teste**: #1
 >**Prioridade**: Média.
@@ -164,9 +164,3 @@
 <br>**Resultado Esperado:** Listar todos os eventos para o dia informado.
 <br>**Status:** APROVADO/REPROVADO
 <br>**Report Do Bug:** Nennhum
-
----
-
-
-
-

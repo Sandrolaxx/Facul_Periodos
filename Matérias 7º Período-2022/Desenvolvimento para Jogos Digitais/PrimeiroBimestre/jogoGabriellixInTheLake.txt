@@ -1,0 +1,31 @@
+Jogo Gabriellix in the Lake:
+
+Como vai ser o personagem?
+Nome da personagem se chama Gabriellix, ela é uma bruxa.
+
+O que ele vai coletar?
+Não vai coletar nada, ela só tem de conseguir passar pelos inimigos até o final da fase.
+
+Quais são os possíveis inimigos?
+Serão três inimigos: Gota Ácida, Agro da Floresta, Gota Ácida Voadora.
+
+Teremos um miniboss?
+Não. Serão apenas os três inimigos citados acima.
+
+Teremos um BOSS?
+Não. Serão apenas os três inimigos citados acima.
+
+
+Fluxograma dos passos do jogo. 
+
+*Tela inicial com o botão Iniciar.
+
+* Somente uma fase com um número X(configurável) de ondas dos inimigos existentes.
+
+* A personagem possui 3 vidas.
+
+* Caso a hitbox da personagem encoste na hitbox dos inimigos ela perde uma vida.
+
+* O jogador perde o jogo caso perca as 3 vidas.
+
+* O jogar ganha o jogo caso passe por todas as ondas de inimigos.
